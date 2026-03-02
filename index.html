@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtitle Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+        select {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        #downloadLink {
+            display: block;
+            margin: 20px auto;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #downloadLink:hover {
+            background: #0056b3;
+        }
+
+        #output {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Subtitle Translator</h1>
+        <input type="file" id="subtitleFile" accept=".srt">
+        <select id="languageSelect">
+            <option value="PT-PT">Portuguese (Portugal)</option>
+            <option value="ES">Spanish</option>
+            <option value="FR">French</option>
+            <option value="DE">German</option>
+            <!-- Add more languages as needed -->
+        </select>
+        <button onclick="translateSubtitles()">Translate Subtitles</button>
+        <a id="downloadLink" style="display:none;">Download Translated File</a>
+        <pre id="output"></pre>
+    </div>
+    <script src="translator.js"></script>
+</body>
+
+</html>
